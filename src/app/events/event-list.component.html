@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1>Upcoming Angular Events</h1>
+  <hr />
+  <div class="row">
+    <event-thumbnail
+      class="col-lg-4"
+      #thumbnail
+      *ngFor="let event of events"
+      [event]="event"
+      (eventClick)="handleEventClicked($event)"
+      (click)="handleThumbnailClick(event.name)"
+    ></event-thumbnail>
+  </div>
+</div>

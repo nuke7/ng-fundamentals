@@ -1,0 +1,15 @@
+<div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
+  <h3>{{ event.name }}</h3>
+  <div><em>Date</em>: {{ event?.date }}</div>
+  <div [ngClass]="getStartTime()"><em>Time</em>: {{ event?.time }}</div>
+  <div><em>Price</em>: ${{ event?.price }}</div>
+  <div *ngIf="event?.location">
+    <strong>Location</strong>: {{ event?.location?.address }} -
+    {{ event?.location?.city }},
+    {{ event?.location?.country }}
+  </div>
+  <div *ngIf="event?.onlineUrl">
+    <span> <strong>Online Url</strong>: {{ event?.onlineUrl }} </span>
+  </div>
+  <button class="btn btn-primary" (click)="handleBtnClick()">click me!</button>
+</div>

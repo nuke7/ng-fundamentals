@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+html,
+.container-fluid,
+.container {
+  background-color: #38434e;
+  color: rgb(245, 236, 224);
+}
+
+hr {
+  border-top: 2px solid rgba(206, 193, 193, 0.5) !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.green {
+  color: #065a34;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: #083a57;
+}
+
+.thumbnail {
+  margin: 1rem;
+  padding: 1rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #596c81;
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.hoverwell:hover {
+  background-color: #485563;
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.pointable {
+  cursor: pointer;
+}
+
+button {
+  color: #555;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.toast-success {
+  background-color: #51a351;
+}
+.toast-error {
+  background-color: #bd362f;
+}
+.toast-info {
+  background-color: #2f96b4;
+}
+.toast-warning {
+  background-color: #f89406;
+}
