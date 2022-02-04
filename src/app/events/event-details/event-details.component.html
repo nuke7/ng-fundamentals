@@ -1,6 +1,11 @@
 <div class="container">
   <div class="col-md-9">
-    <img [src]="event?.imageUrl" [alt]="event?.name" />
+    <img
+      (click)="handleThumbnailClick(event.name)"
+      [src]="event?.imageUrl"
+      [alt]="event?.name"
+      [ngStyle]="{ cursor: 'pointer' }"
+    />
   </div>
 
   <div class="row">
@@ -25,5 +30,8 @@
         <span> <strong>Online Url</strong>: {{ event?.onlineUrl }} </span>
       </div>
     </div>
+    <button [routerLink]="'/events'" type="button" class="btn btn-secondary">
+      Back to events
+    </button>
   </div>
 </div>

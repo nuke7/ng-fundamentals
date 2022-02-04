@@ -14,12 +14,18 @@ export class EventDetailsComponent implements OnInit {
 
   constructor(
     private eventService: EventService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
     this.event = this.eventService.getEvent(
       +this.route.snapshot.params['id']
     ) as IEvent;
+  }
+
+  handleThumbnailClick(eventName: string) {
+    console.log('Thumbnail clicked', eventName);
+    this.toastr.info(eventName);
   }
 }
