@@ -9,7 +9,7 @@ export class EventService {
     setTimeout(() => {
       subject.next(EVENTS);
       subject.complete();
-    }, 100);
+    }, 2000);
     return subject.asObservable();
   }
   getEvent(id: number): IEvent {

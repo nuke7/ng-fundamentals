@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ToastrService } from '../common/toastr.service';
@@ -30,7 +31,8 @@ export class EventListComponent implements OnInit, OnDestroy {
 
   constructor(
     private eventService: EventService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnDestroy(): void {
